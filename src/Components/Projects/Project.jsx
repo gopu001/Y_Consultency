@@ -56,16 +56,10 @@ const projectData = [
 
 function Project(){
 
-  // const settings = {
-  //   dots:true,
-  //   infinite: true,
-  //   speed: 1000,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1
-  // }
 
 
-  var settings = {
+
+  const settings = {
     dots: true,
     infinite: true,
     speed: 1000,
@@ -73,7 +67,6 @@ function Project(){
     slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
-
       {
 
         breakpoint: 1024,
@@ -105,6 +98,7 @@ function Project(){
   return (
     <div className="project">
        <div className="projectMainContainer">
+        <h2>Our Works</h2>
         <div className="projectCards">
           <Slider {...settings}>          
           {

@@ -8,7 +8,7 @@
 
 .project {
   width: 100%;
-  height: 60vh;
+  height: 65vh;
   margin: auto;
   background: #006b75;
 
@@ -17,8 +17,19 @@
     height: 100%;
     margin: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 30px;
+
+    h2{
+    width: 1116px;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    color:orange;
+    }
 
     .projectCards {
       width: 100%;
@@ -37,6 +48,7 @@
         align-items: center;
         text-align: center;
         display: none;
+        padding-left: 50px;
         .eachCard {
             // border: 1px solid black;
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
@@ -76,4 +88,5 @@
       }
     }
   }
+  
 }

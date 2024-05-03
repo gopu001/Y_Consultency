@@ -50,37 +50,77 @@ const testimonialData = [
 function Testimonial () {
 
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        // autoplay: true,
-        autoplaySpeed: 2000,
+        initialSlide: 0,
         arrows: false,
-        // variableWidth: true
+        // autoplay: true,
+        // speed: 3000,
+        // autoplaySpeed: 3000,
+        // cssEase: "linear",
+        pauseOnHover:true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 990,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
       };
     
 
     return (
 
         <div className='testimonial'>
-          <div className="testimonialMainContainer">
-            <h2>What Our Clients Say</h2>
-            <div className="xyz">
+         <div className="testimonialMainContainer">
+          <h2>What Our Clients Say.</h2>
             <div className="testimonialCards">
                 <Slider {...settings}>
                 {
-                    testimonialData.map(({id,img,name}) => (
+                    testimonialData.map(({id,img,name,position,desc}) => (
                         <div key={id} className="testimonialCard">
-                            <img src={img} alt="" /> 
+                          <div className="eachTestimonialCard">
+                            <div className="testimonialUpperPart">
+                              <img src={img} alt="" />
+                              <div className="testimonialInfo">
+                                <h3>{name}</h3>
+                                <h4>{position}</h4>
+                              </div>
+                            </div>
+                            <div className="testimonialDownPart">
+                              <p>{desc}</p>
+                            </div>
+                          </div>
+                          
                         </div>
                     ))
                 }
                 </Slider>
             </div>
-            </div>
-          </div>
+
+         </div>
         </div>
     )
 }
