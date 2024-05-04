@@ -1,10 +1,10 @@
+import './App.css'
 import Navbar from './Components/Navbar/Navbar'
 import Home from './Components/HomePage/Home'
 import About from './Components/About/About'
 import Services from './Components/Services/Services'
 import Project from './Components/Projects/Project'
-import './App.css'
-import Testimonial from './Components/Testimonials/Testimonial'
+import Testimonials from './Components/Testimonials/Testimonials'
 
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
      <Home/>
      <About/>
      <Services/>
-     {/* <Project/> */}
-     <Testimonial/>
+     <Project/>
+     {/* <Testimonials/> */}
     </>
   )
 }

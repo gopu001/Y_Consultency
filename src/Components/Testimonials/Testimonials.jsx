@@ -1,13 +1,13 @@
-import React, { component } from 'react'
-import './Testimonial.scss'
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import react from 'react'
+import './Testimonials.scss'
+import Marquee from 'react-fast-marquee'
+
 import test1 from '../../assets/Testimonials/test1.jpg'
 import test2 from '../../assets/Testimonials/test2.jpg'
 import test3 from '../../assets/Testimonials/test3.jpg'
 import test4 from '../../assets/Testimonials/test4.jpg'
 import test5 from '../../assets/Testimonials/test5.jpg'
+
 
 const testimonialData = [
     {
@@ -47,82 +47,40 @@ const testimonialData = [
     },
 ]
 
-function Testimonial () {
 
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        arrows: false,
-        // autoplay: true,
-        // speed: 3000,
-        // autoplaySpeed: 3000,
-        // cssEase: "linear",
-        pauseOnHover:true,
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 990,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-              initialSlide: 2
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      };
-    
+function Testimonials() {
 
     return (
-
-        <div className='testimonial'>
-         <div className="testimonialMainContainer">
-          <h2>What Our Clients Say.</h2>
-            <div className="testimonialCards">
-                <Slider {...settings}>
-                {
-                    testimonialData.map(({id,img,name,position,desc}) => (
-                        <div key={id} className="testimonialCard">
-                          <div className="eachTestimonialCard">
-                            <div className="testimonialUpperPart">
-                              <img src={img} alt="" />
-                              <div className="testimonialInfo">
-                                <h3>{name}</h3>
-                                <h4>{position}</h4>
+       <div className="testimonials">
+        <div className="testimonialsMainContainer">
+            <h2>What Our Clients Say.</h2>
+            <div className="testimonialsCards">
+                <Marquee>  
+                    {
+                          testimonialData.map(({id,img,name,position,desc}) => (
+                            <div key={id} className="testimonialsCard">
+                              <div className="eachTestimonialsCard">
+                                <div className="testimonialsUpperPart">
+                                  <img src={img} alt="" />
+                                  <div className="testimonialsInfo">
+                                    <h3>{name}</h3>
+                                    <h4>{position}</h4>
+                                  </div>
+                                </div>
+                                <div className="testimonialsDownPart">
+                                  <p>{desc}</p>
+                                </div>
                               </div>
+                              
                             </div>
-                            <div className="testimonialDownPart">
-                              <p>{desc}</p>
-                            </div>
-                          </div>
-                          
-                        </div>
-                    ))
-                }
-                </Slider>
+                        ))
+                    }
+                </Marquee>
             </div>
-
-         </div>
         </div>
+
+       </div>
     )
 }
 
-export default Testimonial
+export default Testimonials
