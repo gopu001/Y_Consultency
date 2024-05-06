@@ -15,41 +15,42 @@ const projectData = [
     projectName:"BEEJ",
     desc:"The sun rose, birds sang, and life embraced another beautiful day.The sun rose, birds sang, and life embraced another beautiful day.",
     button:"Website Link",
+    link: "hi",
   },
   {
     id:2,
     img:project1,
     projectName:"BEEJ",
     desc:"The sun rose, birds sang, and life embraced another beautiful day.The sun rose, birds sang, and life embraced another beautiful day.",
-    button:"Website Link",
+    link: "hi",
   },
   {
     id:3,
     img:project1,
     projectName:"BEEJ",
     desc:"The sun rose, birds sang, and life embraced another beautiful day.The sun rose, birds sang, and life embraced another beautiful day.",
-    button:"Website Link",
+    link: "hi",
   },
   {
     id:4,
     img:project1,
     projectName:"BEEJ",
     desc:"The sun rose, birds sang, and life embraced another beautiful day.",
-    button:"Website Link",
+    link: "hi",
   },
   {
     id:5,
     img:project1,
     projectName:"BEEJ",
     desc:"The sun rose, birds sang, and life embraced another beautiful day.",
-    button:"Website Link",
+    link: "hi",
   },
   {
     id:6,
     img:project1,
     projectName:"BEEJ",
     desc:"The sun rose, birds sang, and life embraced another beautiful day.",
-    button:"Website Link",
+    link: "hi",
   },
 ]
 
@@ -65,7 +66,7 @@ function Project(){
     speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 1,
-    initialSlide: 0,
+    // initialSlide: 0,
     responsive: [
       {
 
@@ -78,15 +79,14 @@ function Project(){
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 990,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          initialSlide: 2
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -102,7 +102,7 @@ function Project(){
         <div className="projectCards">
           <Slider {...settings}>          
           {
-            projectData.map(({id,img,projectName,desc,button}) => (
+            projectData.map(({id,img,projectName,desc,button,link}) => (
               <div key={id} className="projectCard">
                 <div className="eachCard">
 
@@ -111,7 +111,8 @@ function Project(){
                 <div className="projectText">
                   <h3>{projectName}</h3>
                   <p>{desc}</p>
-                  <button>{button}</button>
+                  <a href={link}>Click here</a>
+
                 </div>
                 </div>
               </div>

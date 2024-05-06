@@ -10,7 +10,7 @@
   margin: auto;
   position: fixed;
   z-index: 9999999999999999999999999999999999999999;
-  background: #F7F7F3;
+  background: #ebebeb;
 
   .navContainer{
     width: 100%;
@@ -26,10 +26,13 @@
     .logo{
 
       img{
-        width: 65px;
-        height: 65px;
+        width: 60px;
+        height: 60px;
         object-fit: contain;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         @media(max-width:769px){
           width: 60px;
