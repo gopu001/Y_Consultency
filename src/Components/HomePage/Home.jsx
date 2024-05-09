@@ -8,6 +8,8 @@ function Home() {
     words: ["Website's", "Logo's", "Poster's"],
     loop: 0,
     speed: 0,
+    typeSpeed: 100,
+    deleteSpeed: 100,
   })
 
   return (
