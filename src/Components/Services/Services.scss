@@ -18,10 +18,13 @@
 
   h2 {
     width: 1116px;
-    font-size: 32px;
+    font-size: 35px;
     font-style: normal;
     font-weight: 600;
     line-height: 130%; /* 41.6px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media (max-width: 1217px) {
       width: 1002px;

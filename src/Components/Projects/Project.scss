@@ -20,14 +20,12 @@
 
     h2 {
     width: 100%;
-    font-size: 32px;
+    font-size: 35px;
     font-style: normal;
     font-weight: 600;
     line-height: 130%;
     color: #FFA500;
-    @media(max-width:769px){
-      text-align: center;
-    }
+    text-align: center;
     }
     .projectCards {
 

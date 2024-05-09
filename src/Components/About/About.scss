@@ -20,21 +20,20 @@
     flex-direction: column;
     justify-content: center;
     gap: 30px;
-    align-items: flex-start;
 
     .upperPart {
       display: flex;
       justify-content: center;
       align-items: center;
-      h1 {
+      h2 {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 10px;
         color: orange;
-        font-size: 40px;
+        font-size: 35px;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 130%; /* 41.6px */
 
 
@@ -67,8 +66,8 @@
         gap: 30px;
 
         h2 {
-          font-size: 40px;
-          font-weight: 650;
+          font-size: 30px;
+          font-weight: 600;
           span {
             color: orange;
           }

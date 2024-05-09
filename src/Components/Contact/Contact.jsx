@@ -87,7 +87,7 @@ function Contact() {
     <section className="contact">
       <div className="contactMainContainer">
         <div className="contactHead">
-          <h1>Contact Us</h1>
+          <h2>Contact Us</h2>
           <p>
             Feel free to reach out! Whether you want to take your business from{" "}
             <span>offline2online</span>, a question, or just want to say hello,
