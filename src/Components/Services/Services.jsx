@@ -2,7 +2,7 @@ import React from "react";
 import './Services.scss'
 import design from '../../assets/Services/WebDesign.png'
 import development from '../../assets/Services/Development.png'
-import logoDesign from '../../assets/Services/logoDesign.jpg'
+import logoDesign from '../../assets/Services/logoDesign1.png'
 import poster from '../../assets/Services/poster.png'
 import content from '../../assets/Services/contentWriter.png'
 import digital from '../../assets/Services/digitalMarketing.png'
