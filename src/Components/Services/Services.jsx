@@ -2,8 +2,7 @@ import React from "react";
 import './Services.scss'
 import design from '../../assets/Services/WebDesign.png'
 import development from '../../assets/Services/Development.png'
-
-// import logo from '../../assets/Services/logo.png'
+import logo from '../../assets/Services/logo.png'
 import poster from '../../assets/Services/poster.png'
 import content from '../../assets/Services/contentWriter.png'
 import digital from '../../assets/Services/digitalMarketing.png'
@@ -30,8 +29,7 @@ const serviceData = [
     },
     {
         id:3,
-
-        img:development,
+        img:logo,
         head: "Logo Design",
         desc:"Our creative designers conceptualize unique logos that capture your brand identity, evoking trust and recognition across all channels, leaving a lasting impression and setting you apart in competitive markets.",
         scroll:"Scroll Down",
