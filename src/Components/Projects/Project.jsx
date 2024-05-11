@@ -96,7 +96,7 @@ function Project(){
   };
 
   return (
-    <div className="project">
+    <section className="project">
        <div className="projectMainContainer">
         <h2>Our Works</h2>
         <div className="projectCards">
@@ -121,7 +121,7 @@ function Project(){
           </Slider>
         </div>
        </div>
-    </div>
+    </section>
   )
 }
 

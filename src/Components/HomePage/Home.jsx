@@ -1,7 +1,8 @@
 import React from "react";
 import { useTypewriter, Cursor, Typewriter } from "react-simple-typewriter";
 import homeLogo from "../../assets/Logo/logo_transparent.png";
-import "./Home.scss";
+// import "./Home.scss";
+import "./Home1.scss"
 
 function Home() {
   const [text] = useTypewriter({

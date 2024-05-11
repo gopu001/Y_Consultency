@@ -1,7 +1,6 @@
 import react from 'react'
 import './Testimonials.scss'
 import Marquee from 'react-fast-marquee'
-
 import test1 from '../../assets/Testimonials/test1.jpg'
 import test2 from '../../assets/Testimonials/test2.jpg'
 import test3 from '../../assets/Testimonials/test3.jpg'
@@ -51,7 +50,7 @@ const testimonialData = [
 function Testimonials() {
 
     return (
-       <div className="testimonials">
+       <section className="testimonials">
         <div className="testimonialsMainContainer">
             <h2>What Our Clients Say.</h2>
             <div className="testimonialsCards">
@@ -79,7 +78,7 @@ function Testimonials() {
             </div>
         </div>
 
-       </div>
+       </section>
     )
 }
 

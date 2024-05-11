@@ -11,13 +11,15 @@ function App() {
 
   return (
     <>
-     <Navbar/>
-     <Home/>
-     <About/>
-     <Services/>
-     <Project/>
-     {/* <Testimonials/> */}
-     {/* <Contact/> */}
+    <section>
+      <Navbar/>
+      <Home/>
+    </section>
+    <section> <About/></section>
+    {/* <section> <Services/></section> */}
+    {/* <section><Project/></section> */}
+     {/* <section><Testimonials/></section> */}
+     {/* <section><Contact/></section> */}
     </>
   )
 }

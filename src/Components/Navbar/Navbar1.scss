@@ -6,7 +6,7 @@
 
 .navbar1 {
   width: 100%;
-  height: 10vh;
+  height: 80px;
   margin: auto;
   position: fixed;
   z-index: 9999999999999999999999999999999999999999;
@@ -132,6 +132,6 @@
     }
   }
   @media(max-width:501px){
-    height: 6vh;
+    height: 48px;
   }
 }
