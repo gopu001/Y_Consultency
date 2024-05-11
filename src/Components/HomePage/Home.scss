@@ -6,7 +6,8 @@
 
 .home {
   width: 100%;
-  height: calc(100vh - (-10vh));
+  // height: calc(100vh - (-10vh));
+  height: 100%;
   margin: auto;
   background: #f7f7f3;
   padding: 0 40px;
@@ -125,5 +126,6 @@
   }
   @media(max-width:426px){
     padding: 0 20px;
+    // height: 90vh;
   }
 }
