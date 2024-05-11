@@ -5,7 +5,7 @@ import "./Home.scss";
 
 function Home() {
   const [text] = useTypewriter({
-    words: ["Website's", "Logo's", "Poster's"],
+    words: ["Website's", "Logo's", "Content Writing"],
     loop: 0,
     speed: 0,
     typeSpeed: 100,
