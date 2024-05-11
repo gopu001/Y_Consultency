@@ -96,7 +96,7 @@
         position: absolute;
         top: 76px; //131px
         left: 369px;
-        background: #f7f7f3;
+        background: #ebebeb;
         padding: 30px 0px 0 30px;
 
         li {
@@ -109,8 +109,8 @@
 
         @media(max-width:426px){
           left: 130px;
-          top: 54px;
-          gap: 8px;
+          top: 59px;
+          // gap: 8px;
           padding: 20px 0 0 20px;
         }
       }
@@ -132,6 +132,6 @@
     }
   }
   @media(max-width:501px){
-    height: 9vh;
+    height: 6vh;
   }
 }
