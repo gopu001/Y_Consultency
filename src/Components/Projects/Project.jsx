@@ -3,7 +3,12 @@ import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Project.scss'
-import project1 from '../../assets/Projects/project.png'
+// import './Project1.scss'
+import project1 from '../../assets/Projects/project1.png'
+import project2 from '../../assets/Projects/project2.png'
+import project3 from '../../assets/Projects/project3.png'
+import project4 from '../../assets/Projects/project4.png'
+import project5 from '../../assets/Projects/project5.png'
 
 
 
@@ -12,45 +17,38 @@ const projectData = [
   {
     id:1,
     img:project1,
-    projectName:"BEEJ",
-    desc:"The sun rose, birds sang, and life embraced another beautiful day.The sun rose, birds sang, and life embraced another beautiful day.",
+    projectName:"InOrbit Immigration",
+    desc:"It is a website related to immigration services. Typically, such websites offer assistance and information to individuals and families looking to immigrate to another country",
     button:"Website Link",
-    link: "hi",
+    link: "https://inorbitimmigration.com/",
   },
   {
     id:2,
-    img:project1,
-    projectName:"BEEJ",
-    desc:"The sun rose, birds sang, and life embraced another beautiful day.The sun rose, birds sang, and life embraced another beautiful day.",
-    link: "hi",
+    img:project2,
+    projectName:"SAO",
+    desc:"This is a website for Organization where it provides support to disadvantaged refugees, asylum seekers and other migrants across Sheffield City and Near by areas in UK across Sheffield City.",
+    link: "https://sao.org.uk/",
   },
   {
     id:3,
-    img:project1,
-    projectName:"BEEJ",
-    desc:"The sun rose, birds sang, and life embraced another beautiful day.The sun rose, birds sang, and life embraced another beautiful day.",
-    link: "hi",
+    img:project3,
+    projectName:"MEDIDOCX",
+    desc:"It is website related to medical where they can interpret complex medical reports and convert them into simple formats that are easily understandable by physicians, doctors, or even common people.",
+    link: "https://medidocx.com/#",
   },
   {
     id:4,
-    img:project1,
-    projectName:"BEEJ",
-    desc:"The sun rose, birds sang, and life embraced another beautiful day.",
-    link: "hi",
+    img:project4,
+    projectName:"CLEARVIEW",
+    desc:"It is a website for International Education Consultancy where they provide need-based solutions to the students who want to study in Canada to advance their careers",
+    link: "https://clearviewinternationaleducation.com/",
   },
   {
     id:5,
-    img:project1,
-    projectName:"BEEJ",
-    desc:"The sun rose, birds sang, and life embraced another beautiful day.",
-    link: "hi",
-  },
-  {
-    id:6,
-    img:project1,
-    projectName:"BEEJ",
-    desc:"The sun rose, birds sang, and life embraced another beautiful day.",
-    link: "hi",
+    img:project5,
+    projectName:"RISHITHA HEALTH CARE",
+    desc:"It is a HealthCare website with a mission to deliver healthcare products to all, especially to the growing and ageing communities. ",
+    link: "https://rishitahealthcare.com/",
   },
 ]
 
@@ -105,14 +103,11 @@ function Project(){
             projectData.map(({id,img,projectName,desc,button,link}) => (
               <div key={id} className="projectCard">
                 <div className="eachCard">
-
-               
                 <img src={img} alt="" />
                 <div className="projectText">
                   <h3>{projectName}</h3>
                   <p>{desc}</p>
-                  <a href={link}>Click here</a>
-
+                  <a href={link} target='_blank' >Click here</a>
                 </div>
                 </div>
               </div>
