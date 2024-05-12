@@ -54,7 +54,7 @@ function Testimonials() {
         <div className="testimonialsMainContainer">
             <h2>What Our Clients Say.</h2>
             <div className="testimonialsCards">
-                <Marquee speed={30}>  
+                <Marquee speed={25}>  
                     {
                           testimonialData.map(({id,img,name,position,desc}) => (
                             <div key={id} className="testimonialsCard">

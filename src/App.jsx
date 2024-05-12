@@ -19,7 +19,7 @@ function App() {
     <section> <Services/></section>
     <section><Project/></section>
      <section><Testimonials/></section>
-     {/* <section><Contact/></section> */}
+     <section><Contact/></section>
     </>
   )
 }

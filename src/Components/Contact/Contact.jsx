@@ -19,7 +19,7 @@ const contactData = [
   {
     id: 1,
     img: emailImg,
-    info: "gopunikhil001@gmail.com",
+    info: "enquiries@y-solutions.in",
   },
   {
     id: 1,
