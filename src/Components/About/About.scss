@@ -9,7 +9,7 @@
   margin: auto;
   background: #006b75;
   color: whitesmoke;
-  padding:0 40px;
+  padding:40px;
 
   .aboutChild {
     max-width: 1116px;
@@ -116,6 +116,9 @@
         @media(max-width:651px){
           width: 90%;
         }
+        @media(max-width:426px){
+          width: 100%;
+        }
       }
       .lowerRight {
         width: 50%;
@@ -144,6 +147,6 @@
     }
   }
   @media(max-width:865px){
-    padding: 0 29px;
+    padding: 24px 29px;
   }
 }
