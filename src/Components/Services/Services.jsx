@@ -1,5 +1,4 @@
 import React from "react";
-// import "./Services.scss";
 import './Services1.scss'
 import design from "../../assets/Services/WebDesign.png";
 import development from "../../assets/Services/Development.png";
@@ -71,7 +70,7 @@ const serviceData = [
 
 function Services() {
   return (
-    <section className="services">
+    <section name="Services" className="services">
       <div className="servicesMainContainer">
         <div className="serviceSub">
         <h2>Our Services</h2>

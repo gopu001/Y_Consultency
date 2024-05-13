@@ -94,7 +94,7 @@ function Project(){
   };
 
   return (
-    <section className="project">
+    <section name="Our Works" className="project">
        <div className="projectMainContainer">
         <h2>Our Works</h2>
         <div className="projectCards">

@@ -1,10 +1,11 @@
 import React from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-scroll"
 import { useState } from "react";
 import "./Navbar1.scss";
 import logo from "../../assets/Logo/black-logo.png";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
+
 
 const navData = [
   {
@@ -23,12 +24,8 @@ const navData = [
     id: 4,
     link: "Our Works",
   },
-  // {
-  //   id: 5,
-  //   link: "TechStalk",
-  // },
   {
-    id: 6,
+    id: 5,
     link: "Contact",
   },
 ];
@@ -45,10 +42,10 @@ function Navbar() {
   };
 
   return (
-    <div className="navbar1">
+    <section className="navbar1">
       <div className="navContainer">
         <div className="logo">
-          <Link to="Home" onClick={closeNav}>
+          <Link to="Home" smooth={true} duration={1300} onClick={closeNav}>
            <img src={logo} alt="" />
           </Link>
         </div>
@@ -56,7 +53,7 @@ function Navbar() {
         <ul>
           {navData.map(({ id, link }) => (
             <li key={id}>
-              <Link to={link} onClick={closeNav}>
+              <Link to={link} smooth={true} duration={1300} onClick={closeNav}>
                 {link}
               </Link>
             </li>
@@ -70,7 +67,7 @@ function Navbar() {
             <ul className="mobileNav">
               {navData.map(({ id, link }) => (
                 <li key={id}>
-                  <Link to={link} onClick={closeNav}>
+                  <Link to={link} smooth={true} duration={1300} onClick={closeNav}>
                     {link}
                   </Link>
                 </li>
@@ -79,7 +76,8 @@ function Navbar() {
           )}
         </div>
       </div>
-    </div>
+      
+    </section>
   );
 }
 

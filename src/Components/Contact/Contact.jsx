@@ -1,28 +1,29 @@
 import react, { useEffect, useRef, useState } from "react";
 import "./Contact.scss";
-import { BiPhoneCall } from "react-icons/bi";
 import callImg from "../../assets/Contact/call.svg";
 import emailImg from "../../assets/Contact/email.svg";
 import locationImg from "../../assets/Contact/location.svg";
 import instaImg from "../../assets/Contact/insta.png";
 import linkedinImg from "../../assets/Contact/linkedin.png";
 import twitter from "../../assets/Contact/twitter.png.png";
-import thankyouImg from '../../assets/Contact/accept.png'
-
+import thankyouImg from "../../assets/Contact/accept.png";
+import whatsappImg from "../../assets/Contact/whatspp.png";
 
 const contactData = [
   {
     id: 1,
     img: callImg,
-    info: "+91 8186838735, 9735712598",
+    info: "+91 9735712598",
+    link: "tel:+919735712598",
   },
   {
-    id: 1,
+    id: 2,
     img: emailImg,
     info: "enquiries@y-solutions.in",
+    link: "mailto:enquiries@y-solutions.in",
   },
   {
-    id: 1,
+    id: 3,
     img: locationImg,
     info: "Hyderabad",
   },
@@ -39,7 +40,7 @@ function Contact() {
   const [error, setError] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
-  
+
   const formRef = useRef();
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -48,14 +49,14 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const validationErrors = validate(form)
+    const validationErrors = validate(form);
     setError(validationErrors);
     setIsSubmit(true);
-    if(Object.keys(error).length === 0 && isSubmit){
-        setShowAlert(true)
-        setForm(initialValues)
+    if (Object.keys(error).length === 0 && isSubmit) {
+      setShowAlert(true);
+      setForm(initialValues);
     }
-  }
+  };
 
   useEffect(() => {
     if (Object.keys(error).length === 0 && isSubmit) {
@@ -84,7 +85,7 @@ function Contact() {
   };
 
   return (
-    <section className="contact">
+    <section name="Contact" className="contact">
       <div className="contactMainContainer">
         <div className="contactHead">
           <h2>Contact Us</h2>
@@ -102,10 +103,10 @@ function Contact() {
             </div>
             <div className="contactFormLeftMiddle">
               <div className="middleOnes">
-                {contactData.map(({ id, img, info }) => (
+                {contactData.map(({ id, img, info, link }) => (
                   <div key={id} className="eachMiddleOnes">
                     <img src={img} alt="" />
-                    <h4>{info}</h4>
+                    {link ? <a href={link}>{info}</a> : <h4>{info}</h4>}
                   </div>
                 ))}
               </div>
@@ -115,13 +116,14 @@ function Contact() {
                 <img src={linkedinImg} alt="" />
                 <img src={instaImg} alt="" />
                 <img src={twitter} alt="" />
+                <a href="https://wa.me/+91 8186838735" target="_blank">
+                  <img src={whatsappImg} alt="" />
+                </a>
               </div>
             </div>
           </div>
           <div className="contactFormRight">
             <form onSubmit={handleSubmit} ref={formRef}>
-
-
               <div className="inputs">
                 <label>Full Name</label>
                 <input
@@ -133,7 +135,6 @@ function Contact() {
                 />
                 <p>{error.fullname}</p>
               </div>
-
 
               <div className="inputs">
                 <label>Email</label>
@@ -147,7 +148,6 @@ function Contact() {
                 />
                 <p>{error.email}</p>
               </div>
-
 
               <div className="inputs">
                 <label>Message</label>
@@ -164,15 +164,16 @@ function Contact() {
               <button type="submit">Send Message</button>
             </form>
 
-            {
-                showAlert && (
-                    <div className="submitAlert">
-                        <img src={thankyouImg} alt=""/>
-                        <p>Thankyou for contacting. We will get back to you as soon as possible</p>
-                    <button onClick={() => setShowAlert(false)} >Close</button>
-                    </div>
-                )
-            }
+            {showAlert && (
+              <div className="submitAlert">
+                <img src={thankyouImg} alt="" />
+                <p>
+                  Thankyou for contacting. We will get back to you as soon as
+                  possible
+                </p>
+                <button onClick={() => setShowAlert(false)}>Close</button>
+              </div>
+            )}
           </div>
         </div>
       </div>

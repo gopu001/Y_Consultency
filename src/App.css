@@ -22,3 +22,33 @@ section{
     scroll-snap-align: center;
 }
 
+.reachOut{
+  width: 182px;
+  height: 35px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: orangered;
+  position: fixed;
+  bottom: 35px;
+  right: -20px;
+  border-radius: 50px;
+  gap: 3px;
+  padding-left: 15px;
+  img{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+  }
+  a{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    transition: 1s ease-in-out;
+
+    &:hover{
+      color: #36454F;
+      font-weight: 500;
+    }
+  }
+}
