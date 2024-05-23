@@ -24,9 +24,7 @@ function App() {
 
      <div className="reachOut">
      <img src={whatsappImg} alt="" />
-        {/* <a href="https://wa.me/+919735712598" target='_blank'> <img src={whatsappImg} alt="" /> </a> */}
         <a href="https://wa.me/+919735712598" target='_blank'>Reach Out to Us</a>
-        {/* <p>react out to us</p> */}
       </div>
     </>
   )

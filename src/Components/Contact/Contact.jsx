@@ -66,13 +66,13 @@ function Contact() {
 
   const validate = (values) => {
     const error = {};
-    const regex = /^[a-zA-Z0-9._%+-]+@gmail.com\.com$/;
+    const regex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
 
     if (!values.fullname || values.fullname.length < 4) {
       error.fullname = "Fullname must be atleast 3 characters !";
     }
     if (!values.email) {
-      error.email = "Enter is required!";
+      error.email = "Email is required!";
     } else if (!regex.test(values.email)) {
       error.email = "Enter valid email address!";
     }
@@ -116,7 +116,7 @@ function Contact() {
                 <img src={linkedinImg} alt="" />
                 <img src={instaImg} alt="" />
                 <img src={twitter} alt="" />
-                <a href="https://wa.me/+91 8186838735" target="_blank">
+                <a href="https://wa.me/+919735712598" target="_blank">
                   <img src={whatsappImg} alt="" />
                 </a>
               </div>
