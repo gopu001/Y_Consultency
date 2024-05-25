@@ -1,4 +1,4 @@
-import react, { component } from 'react'
+import react, { component, useEffect } from 'react'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,7 +9,8 @@ import project2 from '../../assets/Projects/project2.png'
 import project3 from '../../assets/Projects/project3.png'
 import project4 from '../../assets/Projects/project4.png'
 import project5 from '../../assets/Projects/project5.png'
-
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 
 const projectData = [
@@ -56,7 +57,9 @@ const projectData = [
 function Project(){
 
 
-
+useEffect(() => {
+  Aos.init({ duration: 2000 });
+}, []);
 
   const settings = {
     dots: true,
@@ -96,12 +99,13 @@ function Project(){
   return (
     <section name="Our Works" className="project">
        <div className="projectMainContainer">
-        <h2>Our Works</h2>
+        <h2 data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom">Our Works</h2>
         <div className="projectCards">
           <Slider {...settings}>          
           {
-            projectData.map(({id,img,projectName,desc,button,link}) => (
-              <div key={id} className="projectCard">
+            projectData.map(({id,img,projectName,desc,button,link}, index) => (
+              <div key={id} className="projectCard" data-aos = {index % 2 == 0 ? "flip-right" : "flip-left"} >
                 <div className="eachCard">
                 <img src={img} alt="" />
                 <div className="projectText">

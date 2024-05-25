@@ -9,7 +9,8 @@ import linkedinImg from "../../assets/Contact/linkedin.png";
 import twitter from "../../assets/Contact/twitter.png.png";
 import thankyouImg from "../../assets/Contact/accept.png";
 import whatsappImg from "../../assets/Contact/whatspp.png";
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 // Service ID: service_yv3or9y
 // Template ID: template_r21saag
@@ -41,6 +42,11 @@ const contactData = [
 ];
 
 function Contact() {
+
+ useEffect(() => {
+  Aos.init({duration: 2000})
+ }, [])
+
   const initialValues = {
     fullname: "",
     email: "",
@@ -119,9 +125,10 @@ function Contact() {
   };
 
   return (
-    <section name="Contact" className="contact">
-      <div className="contactMainContainer">
-        <div className="contactHead">
+    <section name="Contact" className="contact" >
+      <div className="contactMainContainer" >
+        <div className="contactHead" data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom">
           <h2>Contact Us</h2>
           <p>
             Feel free to reach out! Whether you want to take your business from{" "}
@@ -129,9 +136,9 @@ function Contact() {
             we would love to hear from you.
           </p>
         </div>
-        <div className="contactForm">
-          <div className="contactFormLeft">
-            <div className="contactFormLeftTop">
+        <div className="contactForm" data-aos = "flip-down" data-aos-offset = "300" data-aos-easing = "linear">
+          <div className="contactFormLeft" >
+            <div className="contactFormLeftTop" >
               <h3>Contact Information</h3>
               <p>Say Something to start a live chart!</p>
             </div>

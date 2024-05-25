@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './Services1.scss'
 import design from "../../assets/Services/WebDesign.png";
 import development from "../../assets/Services/Development.png";
@@ -8,6 +8,9 @@ import content from "../../assets/Services/contentWriter.png";
 import digital from "../../assets/Services/digitalMarketing.png";
 import advertisement from "../../assets/Services/advertisement.png";
 import arrow from "../../assets/Services/arrow.png";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+
 
 const serviceData = [
   {
@@ -69,14 +72,23 @@ const serviceData = [
 ];
 
 function Services() {
+   
+  useEffect(() => {
+    Aos.init({duration: 2000})
+  }, [])
+
+
+
   return (
     <section name="Services" className="services">
       <div className="servicesMainContainer">
         <div className="serviceSub">
-        <h2>Our Services</h2>
-        <div className="serviceGridCards">
+        <h2 data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom">Our Services</h2>
+        <div className="serviceGridCards"  >
           {serviceData.map(({ id, img, head, desc, scroll, arrowImg }) => (
-            <div key={id} className="serviceCards">
+            <div key={id} className="serviceCards" data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom">
               <div className="serviceCard">
                 <img src={img} alt="" />
                 <div className="serviceText">

@@ -17,12 +17,12 @@ a {
     scroll-behavior: smooth;
 } */
 
-section{
-    height: 100%;
-    scroll-snap-align: center;
+section {
+  height: 100%;
+  scroll-snap-align: center;
 }
 
-.reachOut{
+.reachOut {
   width: 182px;
   height: 35px;
   display: flex;
@@ -40,22 +40,23 @@ section{
     height: 25px;
     object-fit: contain;
   } */
-  a{
+  a {
     color: #fff;
     font-size: 14px;
     font-weight: 400;
     transition: 1s ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-    img{
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    img {
       width: 25px;
       height: 25px;
       object-fit: contain;
     }
 
-    &:hover{
-      color: #36454F;
+    &:hover {
+      color: #36454f;
       font-weight: 500;
     }
   }

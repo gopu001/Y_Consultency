@@ -23,7 +23,6 @@ function App() {
      <section><Contact/></section>
 
      <div className="reachOut">
-     {/* <img src={whatsappImg} alt="" /> */}
         <a href="https://wa.me/+919735712598" target='_blank'>
         <img src={whatsappImg} alt="" />
           Reach Out to Us
