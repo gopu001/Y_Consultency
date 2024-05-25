@@ -1,5 +1,6 @@
 import react, { useEffect, useRef, useState } from "react";
 import "./Contact.scss";
+import emailjs from "emailjs-com"
 import callImg from "../../assets/Contact/call.svg";
 import emailImg from "../../assets/Contact/email.svg";
 import locationImg from "../../assets/Contact/location.svg";
@@ -8,6 +9,16 @@ import linkedinImg from "../../assets/Contact/linkedin.png";
 import twitter from "../../assets/Contact/twitter.png.png";
 import thankyouImg from "../../assets/Contact/accept.png";
 import whatsappImg from "../../assets/Contact/whatspp.png";
+
+
+// Service ID: service_yv3or9y
+// Template ID: template_r21saag
+// Public Key: uST20Gv_ZZRmBpbk0
+
+
+
+
+
 
 const contactData = [
   {
@@ -36,6 +47,10 @@ function Contact() {
     message: "",
   };
 
+  // const serviceId = 'service_yv3or9y';
+  // const templateId = 'template_r21saag';
+  // const publicKey = 'uST20Gv_ZZRmBpbk0'
+
   const [form, setForm] = useState(initialValues);
   const [error, setError] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
@@ -52,9 +67,28 @@ function Contact() {
     const validationErrors = validate(form);
     setError(validationErrors);
     setIsSubmit(true);
-    if (Object.keys(error).length === 0 && isSubmit) {
-      setShowAlert(true);
-      setForm(initialValues);
+    if (Object.keys(validationErrors).length === 0 && isSubmit) {
+      emailjs
+      .send(
+        "service_yv3or9y",
+        "template_r21saag",
+        {
+          from_name: form.fullname,
+          to_name: "Y-Solutions",
+          from_email: form.email,
+          to_email: "enquiries@y-solutions.in",
+          message: form.message,
+        },
+        "uST20Gv_ZZRmBpbk0",
+      )
+      .then(() => {
+        setShowAlert(true);
+        setForm(initialValues);
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("Something went wrong. Please try again later.");
+      })
     }
   };
 

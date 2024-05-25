@@ -35,16 +35,24 @@ section{
   border-radius: 50px;
   gap: 3px;
   padding-left: 15px;
-  img{
+  /* img{
     width: 25px;
     height: 25px;
     object-fit: contain;
-  }
+  } */
   a{
     color: #fff;
     font-size: 14px;
     font-weight: 400;
     transition: 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    img{
+      width: 25px;
+      height: 25px;
+      object-fit: contain;
+    }
 
     &:hover{
       color: #36454F;
