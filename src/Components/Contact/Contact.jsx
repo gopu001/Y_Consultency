@@ -25,8 +25,8 @@ const contactData = [
   {
     id: 1,
     img: callImg,
-    info: "+91 9735712598",
-    link: "tel:+919735712598",
+    info: "+91 8186838735",
+    link: "tel:+918186838735",
   },
   {
     id: 2,
@@ -157,7 +157,7 @@ function Contact() {
                 <img src={linkedinImg} alt="" />
                 <img src={instaImg} alt="" />
                 <img src={twitter} alt="" />
-                <a href="https://wa.me/+919735712598" target="_blank">
+                <a href="https://wa.me/+918186838735" target="_blank">
                   <img src={whatsappImg} alt="" />
                 </a>
               </div>
