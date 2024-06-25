@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import { useTypewriter, Cursor, Typewriter } from "react-simple-typewriter";
-import homeLogo from "../../assets/Logo/logo_transparent.png";
+// import homeLogo from "../../assets/Logo/logo_transparent.png";
+// import homeLogo from '../../assets/Logo/svg/logo-no-background.svg'
+// import homeLogo from "../../assets/Logo/y-solutions-color/png/logo-no-background.png"
+import homeLogo from "../../assets/Logo/test.png"
 import "./Home1.scss"
 import Aos from "aos";
 import 'aos/dist/aos.css'

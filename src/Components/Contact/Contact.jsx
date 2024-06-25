@@ -154,9 +154,10 @@ function Contact() {
             </div>
             <div className="contactFormLeftDown">
               <div className="socialMediaImages">
-                <img src={linkedinImg} alt="" />
+                <a target="_blank" href="https://www.linkedin.com/in/y-solutions-a4566a315/"><img src={linkedinImg} alt="" /></a>
+                
                 <img src={instaImg} alt="" />
-                <img src={twitter} alt="" />
+                {/* <img src={twitter} alt="" /> */}
                 <a href="https://wa.me/+918186838735" target="_blank">
                   <img src={whatsappImg} alt="" />
                 </a>

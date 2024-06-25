@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-scroll";
 import { useState } from "react";
 import "./Navbar1.scss";
-import logo from "../../assets/Logo/black-logo.png";
+// import logo from "../../assets/Logo/black-logo.png";
+import logo from "../../assets/Logo/navbar.png"
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
