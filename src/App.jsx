@@ -6,21 +6,23 @@ import Services from './Components/Services/Services'
 import Project from './Components/Projects/Project'
 import Testimonials from './Components/Testimonials/Testimonials'
 import Contact from './Components/Contact/Contact'
+import Footer from './Components/Footer/Footer'
 import whatsappImg from '../src/assets/Contact/whatspp.png'
 
 function App() {
 
   return (
     <>
-    <section>
+    <section id='Home'>
       <Navbar/>
       <Home/>
     </section>
-    <section> <About/></section>
-    <section> <Services/></section>
-    <section><Project/></section>
-     <section><Testimonials/></section>
-     <section><Contact/></section>
+    <section id='About'> <About/></section>
+    <section id='Services'> <Services/></section>
+    <section id='Project'><Project/></section>
+     <section id='Testimonials'><Testimonials/></section>
+     <section id='Contact'><Contact/></section>
+     <section><Footer/></section>
 
      <div className="reachOut">
         <a href="https://wa.me/+919735712598" target='_blank'>

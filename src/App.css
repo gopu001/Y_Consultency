@@ -16,7 +16,9 @@ a {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 } */
-
+html {
+  scroll-behavior: smooth;
+}
 section {
   height: 100%;
   scroll-snap-align: center;
